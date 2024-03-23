@@ -60,7 +60,6 @@ extension FavoritesTVShowVC: UITableViewDataSource, UITableViewDelegate {
          let cell = tableView.dequeueReusableCell(withIdentifier: favoriteTvShowCell, for: indexPath)
          if let cell = cell as? FavoritesTvShowDetailCell {
             cell.showTv = self.tvShow[indexPath.row]
-            print("Name:::", tvShow[indexPath.row].image?.medium)
             return cell
          }
          Alert.showNoMorefavorites(on: self, with: "Delete", message: "No more favorites")

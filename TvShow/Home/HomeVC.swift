@@ -52,6 +52,7 @@ class HomeVC: UIViewController {
       
       APIService.shared.fetchDataShowsTV { result, error in
          guard let result, error == nil else { return }
+         Alert.showFavoriteAlert(on: self, with: "Network Error", message: "Error connecting to the service")
          
          self.tvShow = result
          DispatchQueue.main.async {

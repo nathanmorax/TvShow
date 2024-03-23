@@ -31,4 +31,9 @@ struct Alert {
       alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
       vc.present(alert, animated: true)
    }
+   static func showFetchError(on vc: UIViewController, with title: String, message: String) {
+      let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+      vc.present(alert, animated: true)
+   }
 }

@@ -9,13 +9,9 @@ import Foundation
 
 class TvShow: NSObject, Decodable, NSCoding {
    func encode(with aCoder: NSCoder) {
-      print("Trying to transform Podcast into Data")
       aCoder.encode(id, forKey: "tvIdKey")
       aCoder.encode(name, forKey: "nameKey")
-      //aCoder.encode(language ?? "", forKey: "languageKey")
       aCoder.encode(premiered, forKey: "premieredKey")
-      /*aCoder.encode(officialSite, forKey: "officialSiteKey")
-      aCoder.encode(network, forKey: "networkKey")*/
       aCoder.encode(image?.medium, forKey: "imageKey")
 
    }

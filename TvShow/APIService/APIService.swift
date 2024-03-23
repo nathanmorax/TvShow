@@ -30,7 +30,6 @@ class APIService {
             return
          }
          do {
-            print("data es esta madre", String(decoding: data, as: UTF8.self))
             let objects = try JSONDecoder().decode(T.self, from: data)
             completion(objects, nil)
          } catch {
